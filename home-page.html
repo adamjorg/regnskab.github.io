@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEN RUSSISKE NATIONALBANK</title>
+
+    <style>
+        header {
+    background-color: #666;
+    width: 96%;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    }
+    nav {
+      float: left;
+      width: 97.34%;
+      height: 50px; /* only for demonstration, should be removed */
+      background: #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+    
+    a {
+        display: inline;
+    }
+
+    button {
+        display: inline;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    aside{
+        float: left;
+        width: 30%;
+        height: 700px;
+        background: lightblue;
+        padding: 20px;
+}
+
+    footer {
+        background-color: #777;
+        height: 180px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+}
+
+    div{
+        float: right;
+        width: 64.65%;
+        height: 700px;
+        background: lightgoldenrodyellow;
+        padding: 20px;
+
+    }
+
+    main{
+        width: 100%;
+        height: 700px
+    }
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+    </style>
+</head>
+
+
+<body>
+    <script src="app.js"></script>
+<header>
+    <h1>DEN RUSSISKE NATIONALBANK</h1>
+</header>
+<nav>
+    <pre><a href="home-page.html"><strong>Hovedmenu</strong></a>                    <a href="aarsopgoerelse.html"><strong>Årsopgørelse</strong></a>                    <a href="index.html"><strong>Log ud</strong></a></pre>
+</nav>
+<main>
+<aside>
+    <h2>Seneste Historik</h2>
+    <p><strong>- 78.000.000.000 rubler</strong> (Våben til krigen i Ukraine)</p>
+    <p><strong>- 100.000.000.000 rubler</strong> (Gæld)</p>
+    <p><strong>- 267.000.000.000 rubler</strong> (Sanktioner)</p>
+    <p><strong>+ 100.000.000.000 rubler</strong> (Salg af Gas til nynazisterne i EU og NATO)</p>
+    <p><strong>+ 42.000.000.000 rubler</strong> (Salg a missiler til Nordkorea)</p>
+<br>
+    <h2>Månedlige omkostninger (estimat)</h2>
+    <p><strong>- 10.000.000.000 rubler</strong> (Militær)</p>
+    <p><strong>- 34.000.000.000 rubler</strong> (Probganda)</p>
+    <p><strong>- 1.000.000.000 rubler</strong> (Doping til sport)</p>
+    <p><strong>- 69.000.000.000 rubler</strong> (National støte til Nordkorea)</p>
+</aside>
+<div>
+<section>
+    <img src="images/StockGraf.png" width="800" height="300">
+</section>
+<hr>
+<article>
+    <p>Til Rådighed</p>
+    <button onclick="add()"><strong>+</strong></button>
+    
+    <p id="add"></p>
+
+        <script>
+        let money = 0;
+        getdata();
+        function add() {
+          let text;
+          let money1 = Number(prompt("How much do you want to add?:", "1000"));
+          money += money1
+          if (money1 == null||money1 == "") {
+            text = "Du har " + money + " rubler tilbage.";
+          } else {
+            text = "Du har " + money + " rubler tilbage.";
+          }
+          updatedata();
+          document.getElementById("subtract").innerHTML = text;
+        }
+        </script>
+
+<button onclick="subtract()"><strong>-</strong></button>
+        
+    <p id="subtract"></p>
+
+        <script>
+        function subtract() {
+          let text;
+          let money2 = Number(prompt("how much do you want to subtract?", "1000"));
+          money -= money2
+          if (money2 == null || money2 == "") {
+            text = "Du har " + money + " rubler tilbage.";
+          } else {
+            text = "Du har " + money + " rubler tilbage.";
+          }
+          updatedata();
+          document.getElementById("subtract").innerHTML = text;
+        }
+        </script> 
+</article>
+</div>
+</main>
+<footer>
+    <a href="https://www.livslinien.dk/"><strong> Hjælp </strong></a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><strong> Kontakt </strong></a>
+</footer>
+</body>
+</html>
